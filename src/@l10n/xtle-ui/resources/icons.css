@@ -1,0 +1,80 @@
+
+
+/* icons and images */
+
+.sb-avatar {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.icon {
+    background-size: 131px 113px;
+    width: 17px;
+    height: 17px;
+    background-image: url('../resources/sprite.png');
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-expand-stats {
+    background-position: 0 -64px;
+}
+
+
+.icon-collapse-stats {
+    background-position: -17px -64px;
+}
+
+.icon-search {
+    background-position: -85px -64px;
+}
+
+.icon-project {
+    background-position: -32px -81px;
+}
+
+.icon-language {
+    background-position: -48px -81px;
+}
+
+.icon-folder {
+    background-position: -101px 0;
+}
+
+.icon-file {
+    background-position: -101px -32px;
+}
+
+.icon-ascdesc {
+    background-position: -64px -4px;
+    width: 21px;
+    height: 9px;
+}
+
+.icon-asc {
+    background-position: -64px -13px;
+    width: 21px;
+    height: 4px;
+}
+
+.icon-desc {
+    background-position: -64px 0;
+    width: 21px;
+    height: 4px;
+}
+
+.img-logo {
+    width: 32px;
+    height: 32px;
+    overflow: visible;
+    display: inline-block;
+    position: relative
+}
+
+.img-logo svg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: visible;
+}

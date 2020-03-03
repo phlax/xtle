@@ -1,0 +1,16 @@
+
+.xtle-progress {
+    height: 8px;
+    background-color: #ccc;
+}
+
+
+.dropdown-item:active {
+    background-color: #eee;
+}
+
+
+.xtle-dropdown-menu-results {
+    maxH-height: 200px;
+    overflow-y: auto;
+}

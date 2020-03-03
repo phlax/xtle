@@ -1,0 +1,33 @@
+
+.bg-white {
+    background-color: #f5f5f5 !important;
+}
+
+.bg-light {
+    background-color: #eee !important;
+}
+
+.bg-gradient-light {
+    background-image: linear-gradient(rgba(204, 204, 204, .7), rgba(204, 204, 204, .4), rgba(204, 204, 204, .2), rgba(0,0,0,0));
+}
+
+.bg-secondary,
+.badge-secondary {
+    background-color: #ba6 !important;
+}
+
+a {
+    color: #688eb7;
+}
+
+.badge-primary,
+.btn-primary,
+.bg-primary {
+    background-color: #688eb7 !important;
+}
+
+.badge-success,
+.btn-success,
+.bg-success {
+    background-color: #37914d !important;
+}
