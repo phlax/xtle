@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# emacs
+*~
+
+node_modules
+srcs
+
+src/@chango
+src/@phlax
+public
+
+coverage
