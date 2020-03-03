@@ -1,0 +1,49 @@
+# https://travis-ci.org/#!/phlax/xtle
+language: python
+python:
+  - "3.6"
+cache:
+  directories:
+    - $HOME/virtualenv/python3.6.7/lib
+    - $HOME/virtualenv/python3.6.7/bin
+    - node_modules
+    - $HOME/.nvm
+
+install:
+  - pip install -U setuptools pip pytest
+  - pip install -Ue .
+  - pip install .[test]
+  - nvm install 12
+  - nvm use 12
+  - npm install .
+
+script:
+  - nvm use 12
+  - npm run test
+  - npm run lint
+  - py.test -vv --cov-append
+  - flake8
+
+after_success:
+  - codecov
+
+before_cache:
+  - pyclean
+  - find /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages/ -name "*pyc" | xargs rm -rf
+  - find /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages/ -name "__pycache__" | xargs rm -rf
+
+before_deploy:
+  - rm -rf foo
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+  - echo $DOCKER_API_TOKEN | docker login -u translatetravis2 --password-stdin
+
+deploy:
+  provider: script
+  script: make hub-images
+  skip_cleanup: true
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(build)$
