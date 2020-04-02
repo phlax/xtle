@@ -1,0 +1,43 @@
+
+export APP_NAME=xtle
+export APP_USERNAME=xtle
+export NODE_VERSION=12.0.0
+export APP_ROOT=https://github.com/phlax/l10n.xtle
+export APP_CONFIG=$(cat .config | base64)
+export SYSTEM_PKGS="\
+       curl \
+       gettext \
+       git \
+       virtualenv \
+       libjpeg62-turbo \
+       libfreetype6 \
+       liblcms2-2 \
+       libtiff5 \
+       libwebp6 \
+       libxml2 \
+       libxslt1.1 \
+       make \
+       zlib1g"
+export BUILD_PKGS="\
+       build-essential \
+       libjpeg62-turbo-dev \
+       libfreetype6-dev \
+       liblcms2-dev \
+       libtiff5-dev \
+       libwebp-dev \
+       libxml2-dev \
+       libxslt-dev \
+       python3-dev \
+       zlib1g-dev \
+       libpq-dev"
+export EGGS="\
+       git+https://github.com/phlax/l10n.xtle#egg=xtle \
+       git+https://github.com/phlax/l10n.xtle#egg=xtle[install]"
+export NPM_PKGS="."
+export DEV_EGGS="\
+       git+https://github.com/phlax/l10n.xtle@build#egg=xtle[install] \
+       git+https://github.com/phlax/l10n.xtle@build#egg=xtle[test]"
+export DEV_PKGS="
+       byobu \
+       emacs25-nox \
+       postgresql-client"

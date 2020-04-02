@@ -1,0 +1,114 @@
+# docker-compose for XTLE development.
+#
+version: "2.1"
+services:
+  xtle-base:
+    image: translate/xtle
+    environment:
+        - COMMAND=bash
+
+  dev-base:
+    image: translate/xtle:dev
+    environment:
+        - DEV_EGGS=src/@chango/core srcs/*/
+        - DEV_JS=src/@chango/core src/@chango/ui src/@phlax/react-checkbox-table src/@phlax/react-scroller
+        - LOCAL_USER_ID=${UID:-1000}
+        - COMMAND=byobu
+    volumes:
+      - .:/app/xtle
+
+  dev:
+    extends: dev-base
+    depends_on:
+      - postgres
+      - redis
+      - elasticsearch
+    ports:
+      - 8000:8000
+    volumes:
+      - ./.byobu:/home/xtle/.byobu
+
+  xtle:
+    extends: xtle-base
+    depends_on:
+      - postgres
+      - redis
+      - elasticsearch
+    ports:
+      - 5000:8000
+    command: ["/usr/local/bin/run_interactive"]
+
+  demo:
+    extends: xtle-base
+    depends_on:
+      - postgres-demo
+      - redis-demo
+      - elasticsearch-demo
+    ports:
+      - 7000:8000
+    networks:
+      - demo
+    command: ["/usr/local/bin/run_interactive"]
+
+  test:
+    extends: dev-base
+    command: ["/usr/local/bin/run_shell", "/app/xtle/scripts/runtests"]
+
+  elasticsearch-base:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.16
+    restart: always
+    ports:
+      - 9200:9200
+    environment:
+      - cluster.name=docker-cluster
+      - transport.host=127.0.0.1
+      - transport.tcp.port=9300
+      - http.port=9200
+      - network.host=0.0.0.0
+      - xpack.security.enabled=false
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+
+  elasticsearch:
+    extends: elasticsearch-base
+
+  elasticsearch-demo:
+    extends: elasticsearch-base
+    networks:
+      demo:
+        aliases:
+          - elasticsearch
+
+  postgres-demo:
+    image: translate/postgres-xtle-demo
+    networks:
+      demo:
+        aliases:
+          - postgres
+    environment:
+      - POSTGRES_USER=xtle
+      - POSTGRES_PASSWORD=PASSWORD
+      - POSTGRES_DB=xtledb
+      - PGDATA=/var/lib/postgres/demo-data
+
+  postgres:
+    image: postgres:12.2-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=xtle
+      - POSTGRES_PASSWORD=PASSWORD
+      - POSTGRES_DB=xtledb
+
+  redis:
+    image: redis:alpine
+    restart: always
+
+  redis-demo:
+    image: redis:alpine
+    networks:
+      demo:
+        aliases:
+          - redis
+
+networks:
+  demo:
