@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2020-03-02T05:00:15.260Z\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: react-intl-po\n"
+
+#. [table.header.activity]
+#. defaultMessage is:
+#. Activity
+#: @xtle/ui/translation-table.json
+msgid "Activity"
+msgstr ""
+
+#. [breadcrumb.languages.all]
+#. defaultMessage is:
+#. All languages
+#: @xtle/ui/breadcrumbs.json
+msgid "All languages"
+msgstr ""
+
+#. [breadcrumb.projects.all]
+#. defaultMessage is:
+#. All projects
+#: @xtle/ui/breadcrumbs.json
+msgid "All projects"
+msgstr ""
+
+#. [breadcrumb.navigation.browse]
+#. defaultMessage is:
+#. Browse
+#: @xtle/ui/breadcrumbs.json
+msgid "Browse"
+msgstr ""
+
+#. [control.totals.incomplete]
+#. defaultMessage is:
+#. Continue translation
+#: @xtle/ui/toolbar.json
+msgid "Continue translation"
+msgstr ""
+
+#. [stats.contributors.recent]
+#. defaultMessage is:
+#. Contributors, 30 days
+#: @xtle/ui/stats-info.json
+msgid "Contributors, 30 days"
+msgstr ""
+
+#. [table.header.critical]
+#. defaultMessage is:
+#. Critical
+#: @xtle/ui/translation-table.json
+msgid "Critical"
+msgstr ""
+
+#. [control.totals.critical]
+#. defaultMessage is:
+#. Critical errors
+#: @xtle/ui/toolbar.json
+msgid "Critical errors"
+msgstr ""
+
+#. [breadcrumb.paths.all]
+#. defaultMessage is:
+#. Entire project
+#: @xtle/ui/breadcrumbs.json
+msgid "Entire project"
+msgstr ""
+
+#. [stats.checks.failing]
+#. defaultMessage is:
+#. Failing checks
+#: @xtle/ui/stats-info.json
+msgid "Failing checks"
+msgstr ""
+
+#. [table.header.incomplete]
+#. defaultMessage is:
+#. Incomplete
+#: @xtle/ui/translation-table.json
+msgid "Incomplete"
+msgstr ""
+
+#. [stats.translations.lastaction]
+#. defaultMessage is:
+#. Last action
+#: @xtle/ui/stats-info.json
+msgid "Last action"
+msgstr ""
+
+#. [table.header.name]
+#. defaultMessage is:
+#. Name
+#: @xtle/ui/translation-table.json
+msgid "Name"
+msgstr ""
+
+#. [table.header.progress]
+#. defaultMessage is:
+#. Progress
+#: @xtle/ui/translation-table.json
+msgid "Progress"
+msgstr ""
+
+#. [control.totals.suggestions]
+#. defaultMessage is:
+#. Review suggestions
+#: @xtle/ui/toolbar.json
+msgid "Review suggestions"
+msgstr ""
+
+#. [breadcrumb.search.placeholder]
+#. defaultMessage is:
+#. Search
+#. [toolbar.search.placeholder]
+#. defaultMessage is:
+#. Search
+#: @xtle/ui/breadcrumbs.json
+#: @xtle/ui/toolbar.json
+msgid "Search"
+msgstr ""
+
+#. [table.header.suggestions]
+#. defaultMessage is:
+#. Suggestions
+#: @xtle/ui/translation-table.json
+msgid "Suggestions"
+msgstr ""
+
+#. [control.stats.contributors.top]
+#. defaultMessage is:
+#. Top contributors:
+#: @xtle/ui/stats.json
+msgid "Top contributors:"
+msgstr ""
+
+#. [table.header.total]
+#. defaultMessage is:
+#. Total
+#: @xtle/ui/translation-table.json
+msgid "Total"
+msgstr ""
+
+#. [breadcrumb.navigation.translate]
+#. defaultMessage is:
+#. Translate
+#: @xtle/ui/breadcrumbs.json
+msgid "Translate"
+msgstr ""
+
+#. [stats.translation.statistics]
+#. defaultMessage is:
+#. Translation statistics
+#: @xtle/ui/stats-info.json
+msgid "Translation statistics"
+msgstr ""
+
+#. [stats.translations.latest]
+#. defaultMessage is:
+#. Translations
+#: @xtle/ui/stats-info.json
+msgid "Translations"
+msgstr ""
+
+#. [control.totals.all]
+#. defaultMessage is:
+#. View all
+#: @xtle/ui/toolbar.json
+msgid "View all"
+msgstr ""
+
+#. [navbar.branding.xtle]
+#. defaultMessage is:
+#. XTLE translation and localisation environment
+#: @xtle/ui/logos.json
+msgid "XTLE translation and localisation environment"
+msgstr ""
