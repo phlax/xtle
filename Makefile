@@ -46,9 +46,10 @@ docker-push:
 	docker push translate/xtle
 	docker push translate/xtle:dev
 	docker push translate/postgres-xtle-demo
+	docker push translate/elasticsearch-xtle-demo
 
 
-postgres-demo:
+demo:
 	docker-compose pull -q postgres elasticsearch
 	docker-compose up --no-start postgres elasticsearch
 	docker commit `docker-compose  ps -q postgres` translate/postgres-xtle-demo
@@ -61,4 +62,4 @@ postgres-demo:
 	docker commit `docker-compose  ps -q elasticsearch-demo` translate/elasticsearch-xtle-demo
 
 
-hub-images: dev-image production-image postgres-demo docker-push
+hub-images: dev-image production-image demo docker-push

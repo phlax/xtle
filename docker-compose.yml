@@ -73,7 +73,7 @@ services:
     extends: elasticsearch-base
 
   elasticsearch-demo:
-    extends: elasticsearch-base
+    image: translate/elasticsearch-xtle-demo
     networks:
       demo:
         aliases:
