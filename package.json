@@ -38,7 +38,7 @@
         "react": "^16.13.1",
         "react-app-polyfill": "^1.0.6",
         "react-avatar": "^3.9.2",
-        "react-dev-utils": "^10.2.1",
+        "react-dev-utils": "^11.0.4",
         "react-dom": "^16.13.1",
         "react-intl": "^4.3.1",
         "react-mousetrap": "^0.2.0",
